@@ -1,0 +1,34 @@
+class Solution {
+    func numIdenticalPairs(_ nums: [Int]) -> Int {
+        var result = 0
+        
+        for i in 0..<nums.count {
+            for j in 0..<nums.count {
+                if nums[i] == nums[j]  && i < j   {
+                    result += 1
+                } else {
+                    result += 0
+                    
+                    // OR
+//                           var result = 0
+//
+//                           for (indexI, i) in nums.enumerated() {
+//
+//                               for (indexJ, j) in nums.enumerated() {
+//
+//                                   if i == j && indexI < indexJ {
+//                                       result += 1
+//                                   } else {
+//                                       result += 0
+                           
+                                    
+                }
+            }
+        }
+        return result
+        
+    }
+}
+
+let mySolution = Solution()
+print(mySolution.numIdenticalPairs([7,2,7,1,4,7]))

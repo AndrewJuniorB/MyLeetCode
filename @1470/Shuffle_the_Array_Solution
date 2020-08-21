@@ -1,0 +1,22 @@
+class Solution{
+    func shuffle(_ nums: [Int], _ n: Int) -> [Int] {
+        var newList: [Int] = []
+        var m = n
+        
+        for index in 0..<n {
+            newList.append(nums[index])
+            //print(newList)
+            newList.append(nums[m])
+            m += 1
+            //print(newList)
+        }
+        
+       
+        return newList
+    }
+}
+
+let mySolution = Solution()
+print(mySolution.shuffle([1,2,3,4,4,3,2,1], 4))
+
+

@@ -1,0 +1,32 @@
+class SolutionEight {
+    func kidsWithCandies(_ candies: [Int], _ extraCandies: Int) -> [Bool] {
+        
+        var greatestAmountOfCandies: [Bool] = []
+        var totalPossibleCandys = 0
+        let maxCandy: Int? = candies.max()
+        
+        if let maxSweet = maxCandy {
+            //print(maxSweet)
+            
+            for candyKids in candies {
+                totalPossibleCandys = candyKids + extraCandies
+                
+                if totalPossibleCandys >= maxSweet {
+                    greatestAmountOfCandies.append(true)
+                }
+                else {
+                    greatestAmountOfCandies.append(false)
+                }
+            }
+            
+        } else {
+            print("Value missing")
+        }
+        
+        return greatestAmountOfCandies
+    }
+}
+
+
+let mySolutionEight = SolutionEight()
+print(mySolutionEight.kidsWithCandies([19,2,1,1,2,5,20], 1))

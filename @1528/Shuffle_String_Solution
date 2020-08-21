@@ -1,0 +1,33 @@
+class SolutionEleven {
+    func restoreString(_ s: String, _ indices: [Int]) -> String {
+        let charArray = Array(s)
+        var stringArray: [Character] = []
+        var finalResult = ""
+        
+        for i in 0..<charArray.count {
+            var newPosition = 0
+                
+            for num in indices {
+                if num == i {
+                    stringArray.append(charArray[newPosition])
+                }
+                newPosition += 1
+            }
+            finalResult = String(stringArray)
+            //print(finalResult)
+        }
+        
+         return finalResult
+    }
+}
+
+let mySolutionEleven = SolutionEleven()
+print(mySolutionEleven.restoreString("aiohn", [3,1,4,2,0]))
+
+
+//  //second solution
+// //Swap work only for EVEN Numbers (do Not use it here)
+//        for i in 0..<stringArray.count/2 {
+//            stringArray.swapAt(i, indices[i])
+//            finalResult = String(stringArray)
+//        }

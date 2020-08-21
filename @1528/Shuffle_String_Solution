@@ -1,5 +1,15 @@
 class SolutionEleven {
     func restoreString(_ s: String, _ indices: [Int]) -> String {
+    
+    // Fast solution
+/*     var finalResult = Array(s)
+        let s = Array(s)
+        
+        for (index, element) in indices.enumerated() {
+            finalResult[element] = s[index]
+                    }
+*/                    
+    
         let charArray = Array(s)
         var stringArray: [Character] = []
         var finalResult = ""
@@ -18,6 +28,8 @@ class SolutionEleven {
         }
         
          return finalResult
+         //for Fast solution
+         // return String(finalResult)
     }
 }
 

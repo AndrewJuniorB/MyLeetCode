@@ -1,0 +1,21 @@
+class Solution {
+    func findNumbers(_ nums: [Int]) -> Int {
+        var count = 0
+        
+        for i in nums {
+           
+            let changeOurNumsToString = String(i)
+            let thenSplitAndMoveIntoArray = Array(changeOurNumsToString)
+            
+            if thenSplitAndMoveIntoArray.count % 2 == 0 {
+                count += 1
+            } else {
+                count += 0
+            }
+        }
+        return count
+    }
+}
+
+let mySolution = Solution()
+print(mySolution.findNumbers([555,901,482,1771]))

@@ -1,0 +1,28 @@
+class Solution {
+    func numberOfSteps (_ num: Int) -> Int {
+        
+        var i = num
+        
+        var steps = 0
+        
+        while i > 0 {
+            
+            i % 2 == 0 ? (i /= 2) : (i -= 1)
+            
+            //            if i % 2 == 0 {
+            //
+            //                i /= 2
+            //
+            //            } else if i % 2 == 1 {
+            //
+            //                i -= 1
+            //            }
+            
+            steps += 1
+        }
+        return steps
+    }
+}
+
+let result = Solution()
+print(result.numberOfSteps(123))

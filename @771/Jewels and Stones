@@ -1,0 +1,20 @@
+class SolutionFive {
+    func numJewelsInStones(_ J: String, _ S: String) -> Int {
+        var a = 0
+        
+        for i in Array(J) {
+            for g in Array(S){
+                if g == i {
+                    a += 1
+                } else {
+                    a += 0
+                }
+                
+            }
+        }
+        return a
+    }
+}
+
+let resultFive = SolutionFive()
+print(resultFive.numJewelsInStones("Asez", "AeSSaaZ"))

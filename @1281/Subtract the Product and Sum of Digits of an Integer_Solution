@@ -1,0 +1,23 @@
+class SolutionFour {
+    func subtractProductAndSum(_ n: Int) -> Int {
+        
+        let nStr = String(n)
+        let nStrArr = Array(nStr)
+        
+        let intArr = nStrArr.compactMap{Int(String($0))}
+        
+        var product = 1
+        var sum = 0
+        
+        for nums in intArr {
+            product *= nums
+            sum += nums
+        }
+        return product - sum
+        
+    }
+    
+}
+
+let myResult = SolutionFour()
+print(myResult.subtractProductAndSum(531))

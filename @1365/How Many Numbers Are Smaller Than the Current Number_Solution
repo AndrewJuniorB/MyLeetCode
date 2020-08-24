@@ -1,0 +1,30 @@
+class Solution {
+    func smallerNumbersThanCurrent(_ nums: [Int]) -> [Int] {
+        var resultCount = 0
+        var result: [Int] = []
+        
+        
+        if nums.count >= 2 && nums.count <= 500 {
+            
+            for numbers in nums {
+                if numbers >= 0 && numbers <= 100 {
+                    
+                    for each in nums {
+                        
+                        if numbers > each  {
+                            resultCount += 1
+                        } else {
+                            resultCount += 0
+                        }
+                    }
+                    result.append(resultCount)
+                    resultCount = 0
+                }
+            }
+        }
+        return result
+    }
+}
+
+let mySolution = Solution ()
+mySolution.smallerNumbersThanCurrent([7, 3])

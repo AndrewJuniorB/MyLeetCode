@@ -1,0 +1,16 @@
+class SolutionSeven {
+    func runningSum(_ nums: [Int]) -> [Int] {
+        var outPut: [Int] = []
+         var sum = 0
+        
+        for eachNumber in nums {
+            sum += eachNumber
+            outPut.append(sum)
+        }
+        return outPut
+    }
+}
+
+let mySevenSolution = SolutionSeven()
+print(mySevenSolution.runningSum([3,1,2,10,1]))
+

@@ -1,0 +1,20 @@
+class SolutionTwo{
+    func defangIPaddr(_ address: String) -> String {
+        
+        var ip = ""
+        
+        
+        for i in address {
+            i == "." ? (ip += "[.]") : (ip += String(i))
+            //            if i == "." {
+            //                ip += "[.]"
+            //            } else {
+            //                ip += String(i)
+            //            }
+        }
+        return ip
+    }
+}
+
+let resultTwo = SolutionTwo()
+print(resultTwo.defangIPaddr("192.168.192.160"))

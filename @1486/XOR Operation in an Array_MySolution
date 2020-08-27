@@ -1,0 +1,25 @@
+
+class Solution {
+    func xorOperation(_ n: Int, _ start: Int) -> Int {
+        var nums: [Int] = []
+        var result: Int = 0
+        
+        if start >= 0 && start <= 1000 && n >= 1 && n <= 1000 {
+            
+            
+            for i in 0..<n {
+                let num = start + 2*i
+                
+                nums.append(num)
+               
+                result ^= nums[i]
+            }
+        } else {
+            print("Start: \(start) or \"n\" is out of range!!!")
+        }
+        return result
+    }
+}
+
+let mySolution = Solution()
+mySolution.xorOperation(4, 3)

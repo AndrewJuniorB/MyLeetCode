@@ -1,0 +1,25 @@
+class Solution {
+    func balancedStringSplit(_ s:String) -> Int {
+        if s.isEmpty{return 0}
+        
+        var result = 0
+        var pair = 0
+        
+        for letter in s {
+            print(letter)
+            if letter == "R" {
+                pair += 1
+            } else {
+                pair -= 1
+            }
+            
+            if pair == 0 {
+                result += 1
+            }
+        }
+        return result
+    }
+}
+
+let mySolution = Solution()
+mySolution.balancedStringSplit("RLRRRLLRLLRRLLLR")

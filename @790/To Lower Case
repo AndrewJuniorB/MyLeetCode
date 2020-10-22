@@ -1,0 +1,23 @@
+// First and fast:
+// return str.lowercased()
+
+
+class SolutionSevenNineO {
+    func toLowerCase(_ str: String) -> String {
+        var output = ""
+        
+        for letter in str.map ({ String($0) }) {
+            if let asciiLetter = Character(letter).asciiValue, asciiLetter >= 65, asciiLetter <= 90 {
+                output += String(Character(UnicodeScalar(asciiLetter + 32)))
+            } else {
+                output += String(letter)
+            }
+        }
+        
+        return output
+    }
+}
+
+let andrewSevenNineO = SolutionSevenNineO()
+andrewSevenNineO.toLowerCase("Andrew")
+print(andrewSevenNineO.toLowerCase("GOOGLE vs google")
